@@ -15,7 +15,7 @@
     <a href="<?php the_permalink(); ?>" rel="bookmark">  
       <?php echo get_the_post_thumbnail( get_the_ID(), 'medium' ); ?>
     </a>
-    <h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+    <a href="<?php the_permalink(); ?>" rel="bookmark"><h1 class="entry-title"><?php the_title(); ?></h1></a>
   </div>
 
 <?php else : ?>
