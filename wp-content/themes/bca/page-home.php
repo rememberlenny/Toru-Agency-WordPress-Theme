@@ -16,11 +16,6 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		
-		<main id="main" class="row site-main row" role="main">
-			<div id="slide-case" class="column">
-        <?php wooslider( array( 'slide_page'=>'home-page', 'slider_type' => 'slides', 'smoothheight' => 'true' ) ); ?>
-      </div>
-    </main>
     <div class="">
       <div class=" large-12" id="isotopin">
         <?php 
