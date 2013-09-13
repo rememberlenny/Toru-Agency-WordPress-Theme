@@ -107,14 +107,14 @@
         $(function(){
         
           var $container = $('#isotopin'),
-              $photobutton = $('.menu-item a[href^="http://bca:4421/#photography"]'),
-              $videobutton = $('.menu-item a[href^="http://bca:4421/#video"]'),
-              $shortfilmbutton = $('.menu-item a[href^="http://bca:4421/#short-film"]'),
-              $commercialbutton = $('.menu-item a[href^="http://bca:4421/#commercial"]'),
-              $fashionbutton = $('.menu-item a[href^="http://bca:4421/#fashion"]'),
-              $designbutton = $('.menu-item a[href^="http://bca:4421/#design"]'),
-              $interactivebutton = $('.menu-item a[href^="http://bca:4421/#interactive"]'),
-              $360mediabutton = $('.menu-item a[href^="http://bca:4421/#360media"]'),
+              $photobutton = $('.menu-item a[href^="<?php bloginfo('url') ?>/#photography"]'),
+              $videobutton = $('.menu-item a[href^="<?php bloginfo('url') ?>/#video"]'),
+              $shortfilmbutton = $('.menu-item a[href^="<?php bloginfo('url') ?>/#short-film"]'),
+              $commercialbutton = $('.menu-item a[href^="<?php bloginfo('url') ?>/#commercial"]'),
+              $fashionbutton = $('.menu-item a[href^="<?php bloginfo('url') ?>/#fashion"]'),
+              $designbutton = $('.menu-item a[href^="<?php bloginfo('url') ?>/#design"]'),
+              $interactivebutton = $('.menu-item a[href^="<?php bloginfo('url') ?>/#interactive"]'),
+              $360mediabutton = $('.menu-item a[href^="<?php bloginfo('url') ?>/#360media"]'),
               $homebutton = $('a.logo-head');
 
             $container.imagesLoaded( function(){
@@ -128,56 +128,48 @@
               });  
 
 $photobutton.click( function(){
-  
   hideSlider();
   jQuery('#isotopin').isotope({ filter: '' }).isotope('shuffle').isotope({ filter: '.photography' });
   return false;
 });
 
 $videobutton.click( function(){
-  
   hideSlider();
   jQuery('#isotopin').isotope({ filter: '' }).isotope('shuffle').isotope({ filter: '.short-films, .fashions, .commercials'  });
   return false;
 });
 
 $shortfilmbutton.click( function(){
-  
   hideSlider();
   jQuery('#isotopin').isotope({ filter: '' }).isotope('shuffle').isotope({ filter: '.short-films' });
   return false;
 });
 
 $commercialbutton.click( function(){ 
-  
   hideSlider();
   jQuery('#isotopin').isotope({ filter: '' }).isotope('shuffle').isotope({ filter: '.commercials' });
   return false;
 });
 
 $fashionbutton.click( function(){
-  
   hideSlider();
   jQuery('#isotopin').isotope({ filter: '' }).isotope('shuffle').isotope({ filter: '.fashions' });
   return false;
 });
 
 $designbutton.click( function(){ 
-  
   hideSlider();
 jQuery('#isotopin').isotope({ filter: '' }).isotope('shuffle').isotope({ filter: '.designs' });
 return false;
 });
 
 $interactivebutton.click( function(){
-  
   hideSlider();
   jQuery('#isotopin').isotope({ filter: '' }).isotope('shuffle').isotope({ filter: '.interactives' });
   return false;
 });
 
 $360mediabutton.click( function(){ 
-  
   hideSlider();
   jQuery('#isotopin').isotope({ filter: '' }).isotope('shuffle').isotope({ filter: '.360_media' });
   return false;
