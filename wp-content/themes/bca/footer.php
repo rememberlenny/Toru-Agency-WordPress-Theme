@@ -132,7 +132,9 @@
               $photobutton.click( function(){
                 if (location.pathname == '/'){
                   hideSlider();
-                  jQuery('#isotopin').isotope({ filter: '' }).isotope('shuffle').isotope({ filter: '.photography' });
+                  jQuery('#isotopin').isotope({ filter: '' }).isotope( 'reLayout', function(){
+                    jQuery('#isotopin').isotope('shuffle').isotope({ filter: '.photography' });
+                  } );
                   return false;
                 }
               });
@@ -142,7 +144,9 @@
               $videobutton.click( function(){
                 if (location.pathname == '/'){
                   hideSlider();
-                  jQuery('#isotopin').isotope({ filter: '' }).isotope('shuffle').isotope({ filter: '.short-films, .fashions, .commercials'  });
+                  jQuery('#isotopin').isotope({ filter: '' }).isotope( 'reLayout', function(){
+                    jQuery('#isotopin').isotope('shuffle').isotope({ filter: '.short-films, .fashions, .commercials' });
+                  } );
                   return false;
                 }
               });
@@ -152,7 +156,9 @@
               $shortfilmbutton.click( function(){
                 if (location.pathname == '/'){
                   hideSlider();
-                  jQuery('#isotopin').isotope({ filter: '' }).isotope('shuffle').isotope({ filter: '.short-films' });
+                  jQuery('#isotopin').isotope({ filter: '' }).isotope( 'reLayout', function(){
+                    jQuery('#isotopin').isotope('shuffle').isotope({ filter: '.short-films' });
+                  } );
                   return false;
                 }
               });
@@ -162,7 +168,9 @@
               $commercialbutton.click( function(){ 
                 if (location.pathname == '/'){
                   hideSlider();
-                  jQuery('#isotopin').isotope({ filter: '' }).isotope('shuffle').isotope({ filter: '.commercials' });
+                  jQuery('#isotopin').isotope({ filter: '' }).isotope( 'reLayout', function(){
+                    jQuery('#isotopin').isotope('shuffle').isotope({ filter: '.commercials' });
+                  } );
                   return false;
                 }
               });
@@ -172,7 +180,9 @@
               $fashionbutton.click( function(){
                 if (location.pathname == '/'){
                   hideSlider();
-                  jQuery('#isotopin').isotope({ filter: '' }).isotope('shuffle').isotope({ filter: '.fashions' });
+                  jQuery('#isotopin').isotope({ filter: '' }).isotope( 'reLayout', function(){
+                    jQuery('#isotopin').isotope('shuffle').isotope({ filter: '.fashions' });
+                  } );
                   return false;
                 }
               });
@@ -182,7 +192,9 @@
               $designbutton.click( function(){ 
                 if (location.pathname == '/'){
                   hideSlider();
-                jQuery('#isotopin').isotope({ filter: '' }).isotope('shuffle').isotope({ filter: '.designs' });
+                jQuery('#isotopin').isotope({ filter: '' }).isotope( 'reLayout', function(){
+                    jQuery('#isotopin').isotope('shuffle').isotope({ filter: '.designs' });
+                  } );
                 return false;
                 }
               });
@@ -192,7 +204,9 @@
               $interactivebutton.click( function(){
                 if (location.pathname == '/'){
                   hideSlider();
-                  jQuery('#isotopin').isotope({ filter: '' }).isotope('shuffle').isotope({ filter: '.interactives' });
+                  jQuery('#isotopin').isotope({ filter: '' }).isotope( 'reLayout', function(){
+                    jQuery('#isotopin').isotope('shuffle').isotope({ filter: '.interactives' });
+                  } );
                   return false;
                 }
               });
@@ -202,7 +216,9 @@
               $360mediabutton.click( function(){ 
                 if (location.pathname == '/'){
                   hideSlider();
-                  jQuery('#isotopin').isotope({ filter: '' }).isotope('shuffle').isotope({ filter: '.360_media' });
+                  jQuery('#isotopin').isotope({ filter: '' }).isotope( 'reLayout', function(){
+                    jQuery('#isotopin').isotope('shuffle').isotope({ filter: '.360_media' });
+                  } );
                   return false;
                 }
               });
@@ -212,7 +228,9 @@
               $homebutton.click( function(){
                 if (location.pathname == '/'){
                   hideSlider();
-                  jQuery('#isotopin').isotope({ filter: '' }).isotope('shuffle').isotope({ filter: '' });
+                  jQuery('#isotopin').isotope({ filter: '' }).isotope( 'reLayout', function(){
+                    jQuery('#isotopin').isotope('shuffle').isotope({ filter: '' });
+                  } );
                   return false;
                 }
               });
@@ -234,35 +252,35 @@
 
   function hashCheck(){
     if(location.hash == '#photography'){
-       hideSlider();
       jQuery('#isotopin').isotope({ filter: '' }).isotope('shuffle').isotope({ filter: '.photography' });
     }
     else if(location.hash == '#video'){
-       hideSlider();
-      jQuery('#isotopin').isotope({ filter: '' }).isotope('shuffle').isotope({ filter: '.short-films, .fashions, .commercials' });
+      jQuery('#isotopin').isotope({ filter: '' }).isotope( 'reLayout', function(){
+        jQuery('#isotopin').isotope('shuffle').isotope({ filter: '.short-films, .fashions, .commercials' });
+      } );
     }
     else if(location.hash == '#short-film'){
-       hideSlider();
-      jQuery('#isotopin').isotope({ filter: '' }).isotope('shuffle').isotope({ filter: '.short-films' });
+      jQuery('#isotopin').isotope({ filter: '' }).isotope( 'reLayout', function(){
+        jQuery('#isotopin').isotope('shuffle').isotope({ filter: '.short-films' });
+      } );
     }
     else if(location.hash == '#commercial'){
-       hideSlider();
-      jQuery('#isotopin').isotope({ filter: '' }).isotope('shuffle').isotope({ filter: '.commercial' });
+      jQuery('#isotopin').isotope({ filter: '' }).isotope( 'reLayout', function(){
+        jQuery('#isotopin').isotope('shuffle').isotope({ filter: '.commercials' });
+      } );
     }
     else if(location.hash == '#fashion'){
-       hideSlider();
-      jQuery('#isotopin').isotope({ filter: '' }).isotope('shuffle').isotope({ filter: '.fashion' });
+      jQuery('#isotopin').isotope({ filter: '' }).isotope( 'reLayout', function(){
+        jQuery('#isotopin').isotope('shuffle').isotope({ filter: '.fashions' });
+      } );
     }
     else if(location.hash == '#design'){
-       hideSlider();
       jQuery('#isotopin').isotope({ filter: '' }).isotope('shuffle').isotope({ filter: '.designs' });
     }
     else if(location.hash == '#interactive'){
-       hideSlider();
       jQuery('#isotopin').isotope({ filter: '' }).isotope('shuffle').isotope({ filter: '.interactive' });
     }
     else if(location.hash == '#360media'){
-      hideSlider();
       jQuery('#isotopin').isotope({ filter: '' }).isotope('shuffle').isotope({ filter: '.360_media' });
     }
   }
