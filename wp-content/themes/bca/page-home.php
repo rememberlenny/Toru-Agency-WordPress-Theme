@@ -21,12 +21,12 @@ get_header(); ?>
         <?php wooslider( array( 'slide_page'=>'home-page', 'slider_type' => 'slides', 'smoothheight' => 'true' ) ); ?>
       </div>
     </main>
-    <div class="row">
-      <div class="column large-12" id="isotopin">
+    <div class="">
+      <div class=" large-12" id="isotopin">
         <?php 
           query_posts( array( 
             'posts_per_page' => -1, 
-            'post_type' => array( 'photography', 'videos', 'interactives', 'design', '360_media' ), 
+            'post_type' => array( 'photography', 'videos', 'interactives', 'designs', '360_media', 'fashions' , 'commercials' , 'short-films' ), 
             'paged' => get_query_var( 'paged' ) 
           ) );
         ?>

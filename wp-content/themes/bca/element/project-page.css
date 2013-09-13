@@ -1,12 +1,48 @@
-/* line 4, ../sass/element/project-page.scss */
+/* Start: Recommended Isotope styles */
+/**** Isotope Filtering ****/
+/* line 5, ../sass/element/project-page.scss */
+.isotope-item {
+  z-index: 2;
+}
+
+/* line 9, ../sass/element/project-page.scss */
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+
+/**** Isotope CSS3 transitions ****/
+/* line 17, ../sass/element/project-page.scss */
+.isotope,
+.isotope .isotope-item {
+  -webkit-transition-duration: 0.8s;
+  -moz-transition-duration: 0.8s;
+  transition-duration: 0.8s;
+}
+
+/* line 23, ../sass/element/project-page.scss */
+.isotope {
+  -webkit-transition-property: height, width;
+  -moz-transition-property: height, width;
+  transition-property: height, width;
+}
+
+/* line 29, ../sass/element/project-page.scss */
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+  -moz-transition-property: -moz-transform, opacity;
+  transition-property: transform, opacity;
+}
+
+/* line 39, ../sass/element/project-page.scss */
 .single h2, .single h3 {
   color: #222222;
 }
-/* line 7, ../sass/element/project-page.scss */
+/* line 42, ../sass/element/project-page.scss */
 .single .content-intro {
   margin-top: 1em;
 }
-/* line 9, ../sass/element/project-page.scss */
+/* line 44, ../sass/element/project-page.scss */
 .single .content-intro h2 {
   font-size: 2.375em;
   text-transform: uppercase;
@@ -14,26 +50,26 @@
   margin-bottom: 0em;
   margin-top: 0em;
 }
-/* line 16, ../sass/element/project-page.scss */
+/* line 51, ../sass/element/project-page.scss */
 .single .content-intro h3.subheader {
   font-size: 1.5em;
   font-weight: normal;
 }
-/* line 20, ../sass/element/project-page.scss */
+/* line 55, ../sass/element/project-page.scss */
 .single .content-intro p {
   margin-top: .3em;
 }
 
-/* line 26, ../sass/element/project-page.scss */
+/* line 61, ../sass/element/project-page.scss */
 body .wooslider .wooslider-control-nav.wooslider-control-thumbs {
   margin-bottom: 0em;
 }
-/* line 29, ../sass/element/project-page.scss */
+/* line 64, ../sass/element/project-page.scss */
 body .wooslider .wooslider-control-nav.wooslider-control-thumbs li {
   margin-bottom: 0em;
 }
 
-/* line 35, ../sass/element/project-page.scss */
+/* line 70, ../sass/element/project-page.scss */
 #isotopin img {
   width: 100%;
   display: block;

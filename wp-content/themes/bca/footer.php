@@ -12,7 +12,7 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer row" role="contentinfo">
+	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div id="back-to-top-button" class="row text-center" style="margin-bottom:1em; opacity: .5;">
       <a href="#back-top">▲ Back to Top</a>
     </div>
@@ -41,7 +41,7 @@
 
 
 <script>
-  (function($){
+   (function($){
 
 
     $(window).load(function(){      
@@ -114,129 +114,94 @@
               $fashionbutton = $('.menu-item a[href^="http://bca:4421/#fashion"]'),
               $designbutton = $('.menu-item a[href^="http://bca:4421/#design"]'),
               $interactivebutton = $('.menu-item a[href^="http://bca:4421/#interactive"]'),
-              $360mediabutton = $('.menu-item a[href^="http://bca:4421/#360media"]');
+              $360mediabutton = $('.menu-item a[href^="http://bca:4421/#360media"]'),
+              $homebutton = $('a.logo-head');
 
-          $container.imagesLoaded( function(){
+            $container.imagesLoaded( function(){
 
-          // initialize isotope
+              // initialize isotope
 
-          $container.isotope({
-            masonry: {
-              columnWidth: 20
-            },
-            sortBy: 'number',
-            getSortData: {
-              number: function( $elem ) {
-                var number = $elem.hasClass('element') ? 
-                  $elem.find('.number').text() :
-                  $elem.attr('data-number');
-                return parseInt( number, 10 );
-              },
-              alphabetical: function( $elem ) {
-                var name = $elem.find('.name'),
-                    itemText = name.length ? name : $elem;
-                return itemText.text();
-              }
-            }
+              $container.isotope({
+                masonry: {
+                  columnWidth: 20
+                }
+              });  
+
+$photobutton.click( function(){
+  
+  hideSlider();
+  jQuery('#isotopin').isotope({ filter: '' }).isotope('shuffle').isotope({ filter: '.photography' });
+  return false;
+});
+
+$videobutton.click( function(){
+  
+  hideSlider();
+  jQuery('#isotopin').isotope({ filter: '' }).isotope('shuffle').isotope({ filter: '.short-films, .fashions, .commercials'  });
+  return false;
+});
+
+$shortfilmbutton.click( function(){
+  
+  hideSlider();
+  jQuery('#isotopin').isotope({ filter: '' }).isotope('shuffle').isotope({ filter: '.short-films' });
+  return false;
+});
+
+$commercialbutton.click( function(){ 
+  
+  hideSlider();
+  jQuery('#isotopin').isotope({ filter: '' }).isotope('shuffle').isotope({ filter: '.commercials' });
+  return false;
+});
+
+$fashionbutton.click( function(){
+  
+  hideSlider();
+  jQuery('#isotopin').isotope({ filter: '' }).isotope('shuffle').isotope({ filter: '.fashions' });
+  return false;
+});
+
+$designbutton.click( function(){ 
+  
+  hideSlider();
+jQuery('#isotopin').isotope({ filter: '' }).isotope('shuffle').isotope({ filter: '.designs' });
+return false;
+});
+
+$interactivebutton.click( function(){
+  
+  hideSlider();
+  jQuery('#isotopin').isotope({ filter: '' }).isotope('shuffle').isotope({ filter: '.interactives' });
+  return false;
+});
+
+$360mediabutton.click( function(){ 
+  
+  hideSlider();
+  jQuery('#isotopin').isotope({ filter: '' }).isotope('shuffle').isotope({ filter: '.360_media' });
+  return false;
+});
+
+$homebutton.click( function(){
+  hideSlider();
+  jQuery('#isotopin').isotope({ filter: '' }).isotope('shuffle').isotope({ filter: '' });
+  return false;
+});
+
           });
-        
-          
-          var $optionSets = $('#options .option-set'),
-              $optionLinks = $optionSets.find('a');
 
-          $optionLinks.click(function(){
-            var $this = $(this);
-            // don't proceed if already selected
-            if ( $this.hasClass('selected') ) {
-              return false;
-            }
-            var $optionSet = $this.parents('.option-set');
-            $optionSet.find('.selected').removeClass('selected');
-            $this.addClass('selected');
-      
-            // make option object dynamically, i.e. { filter: '.my-filter-class' }
-            var options = {},
-                key = $optionSet.attr('data-option-key'),
-                value = $this.attr('data-option-value');
-            // parse 'false' as false boolean
-            value = value === 'false' ? false : value;
-            options[ key ] = value;
-            if ( key === 'layoutMode' && typeof changeLayoutMode === 'function' ) {
-              // changes in layout modes need extra logic
-              changeLayoutMode( $this, options )
-            } else {
-              // otherwise, apply new options
-              $container.isotope( options );
-            }
-            
-            return false;
-          });    
-          
-          $photobutton.click( function(){
-            hideSlider();
-            $container.isotope({ filter: '.photography' });
-            return false;
-          } );
-
-          $videobutton.click( function(){
-            hideSlider();
-            $container.isotope({ filter: '.videos' });
-            return false;
-          } );
-
-          $shortfilmbutton.click( function(){
-            hideSlider();
-            $container.isotope({ filter: '.short-film' });
-            return false;
-          } );
-
-          $commercialbutton.click( function(){
-            hideSlider();
-            $container.isotope({ filter: '.commercial' });
-            return false;
-          } );
-
-          $fashionbutton.click( function(){
-            hideSlider();
-            $container.isotope({ filter: '.fashion' });
-            return false;
-          } );
-
-          $designbutton.click( function(){
-            hideSlider();
-            $container.isotope({ filter: '.design' });
-            return false;
-          } );
-
-          $interactivebutton.click( function(){
-            hideSlider();
-            $container.isotope({ filter: '.interactives' });
-            return false;
-          } );
-
-          $360mediabutton.click( function(){
-            hideSlider();
-            $container.isotope({ filter: '.360_media' });
-            return false;
-          } );
-          
-        
         });
-
+      
       });
-    
-    });
 
-  }(jQuery));
+    }(jQuery));
 
   function hideSlider(){
     if (jQuery('#slide-case').css("visibility", "hidden")){
       jQuery('#slide-case').slideUp();
     }
   };
-
-  
 </script>
-
 </body>
 </html>
