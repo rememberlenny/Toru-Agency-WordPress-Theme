@@ -1,0 +1,40 @@
+/* line 4, ../sass/element/project-page.scss */
+.single h2, .single h3 {
+  color: #222222;
+}
+/* line 7, ../sass/element/project-page.scss */
+.single .content-intro {
+  margin-top: 1em;
+}
+/* line 9, ../sass/element/project-page.scss */
+.single .content-intro h2 {
+  font-size: 2.375em;
+  text-transform: uppercase;
+  font-weight: normal;
+  margin-bottom: 0em;
+  margin-top: 0em;
+}
+/* line 16, ../sass/element/project-page.scss */
+.single .content-intro h3.subheader {
+  font-size: 1.5em;
+  font-weight: normal;
+}
+/* line 20, ../sass/element/project-page.scss */
+.single .content-intro p {
+  margin-top: .3em;
+}
+
+/* line 26, ../sass/element/project-page.scss */
+body .wooslider .wooslider-control-nav.wooslider-control-thumbs {
+  margin-bottom: 0em;
+}
+/* line 29, ../sass/element/project-page.scss */
+body .wooslider .wooslider-control-nav.wooslider-control-thumbs li {
+  margin-bottom: 0em;
+}
+
+/* line 35, ../sass/element/project-page.scss */
+#isotopin img {
+  width: 100%;
+  display: block;
+}

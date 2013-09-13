@@ -1,0 +1,17 @@
+.products{
+  li.product{
+    &:hover{ 
+      img.wp-post-image{
+        display:none !important;
+      }
+      .rollover{
+        display:block !important;
+      }
+    }
+  }
+}
+
+select.orderby{
+  font-size: .8em;
+  background-position: 98% 6px !important;
+}

@@ -1,0 +1,66 @@
+/* line 1, ../../sass/element/header/site-title.scss */
+h1.site-title {
+  position: absolute;
+  z-index: 100;
+  background-size: contain;
+  margin: 0 auto;
+}
+
+/* line 9, ../../sass/element/header/site-title.scss */
+#page {
+  padding-top: 25px;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 14, ../../sass/element/header/site-title.scss */
+  .top-bar-container {
+    padding-bottom: .3em;
+  }
+
+  /* line 17, ../../sass/element/header/site-title.scss */
+  .site-branding {
+    padding-bottom: .5em;
+  }
+}
+@media only screen and (min-width: 768px) {
+  /* line 23, ../../sass/element/header/site-title.scss */
+  h1.site-title {
+    position: relative;
+  }
+}
+@media only screen and (max-width: 58.75em) {
+  /* line 28, ../../sass/element/header/site-title.scss */
+  h1.site-title {
+    width: 200px;
+    height: 33px;
+  }
+}
+@media only screen and (max-width: 58.75em) and (min-width: 768px) {
+  /* line 34, ../../sass/element/header/site-title.scss */
+  #page {
+    padding-top: 43px;
+  }
+
+  /* line 37, ../../sass/element/header/site-title.scss */
+  h1.site-title {
+    width: 380px;
+    height: 39px;
+  }
+}
+@media only screen and (min-width: 58.75em) {
+  /* line 43, ../../sass/element/header/site-title.scss */
+  .site-branding {
+    height: 85px;
+  }
+
+  /* line 46, ../../sass/element/header/site-title.scss */
+  #page {
+    padding-top: 163px;
+  }
+
+  /* line 49, ../../sass/element/header/site-title.scss */
+  h1.site-title {
+    width: 594px;
+    height: 98px;
+  }
+}

@@ -1,0 +1,12 @@
+.woocommerce-cart,
+.woocommerce-checkout,
+{
+  #secondary{
+    display: none !important;
+  }
+}
+.cart_totals{
+  p{
+    clear: both;
+  }
+}

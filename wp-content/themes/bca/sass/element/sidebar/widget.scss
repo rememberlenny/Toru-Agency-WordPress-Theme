@@ -1,0 +1,44 @@
+#secondary{
+  display: none;
+}
+
+@media only screen and (min-width: 768px){
+  .archive{
+    #secondary{
+      display: block ;
+    }
+  }
+}
+
+.widget{
+
+  font-size:.88em;
+  .widget-title{
+    font-size: .95em !important;
+    border-bottom: 1px solid rgba(0, 0, 0, .8);
+    
+  }
+  ul{
+    font-size: .9em !important;
+  }
+
+  .count{
+    display: none;
+  }
+
+  li{
+    &:hover{
+      background: rgb(230, 230, 230);
+      color: #333;
+    }
+    &.chosen{
+      backgrond: none !important;
+    }
+  }
+
+}
+.error404{
+  #secondary{
+    display: none !important;
+  }
+}

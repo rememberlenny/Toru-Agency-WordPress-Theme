@@ -1,0 +1,33 @@
+@media only screen and (min-width: 768px){
+  #secondary{
+    h1 {
+      font-size: .8em;
+    }
+    li{
+      text-transform: capitalize;
+      list-style: none !important;
+    }
+  }
+}
+.woocommerce-ordering{
+  padding-left: .9735em;
+}
+select{ 
+  border: none;
+  outline: 0;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0px;
+  border: 2px solid rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
+  padding: 0px 5px;
+  background: url('/wp-content/themes/bullettshop/images/arrow-flip-sm.png') no-repeat !important;
+  background-position: 98% 8px !important;
+}
+#secondary{
+  li{
+    text-transform: capitalize;
+  }
+  .product-categories{
+    list-style: none !important;
+  }
+}

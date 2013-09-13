@@ -1,0 +1,44 @@
+section#products{
+  width: 100%;
+}
+@media only screen and (min-width: 768px) {
+  section#products{
+    width: 75%;
+    float: right;
+  }
+
+  #top-wrap{
+    .woocommerce-pagination{
+      float: right;
+      margin-top: -2.6em;
+    }
+  }
+}
+
+.woocommerce-result-count{
+}
+.home{
+
+  #secondary{
+    display: none !important;
+  }
+  .products{
+    width: 100% !important;
+    left: 0px !important;
+  }
+  #products{
+    background: white;
+    border-top: 1px solid #333;
+    padding-top: 24px;
+  }
+  .page-title{
+    display: none;
+  }
+  .woocommerce-ordering{
+    display: none;
+  }
+}
+
+.home section#products{
+  width: 100% !important;
+}

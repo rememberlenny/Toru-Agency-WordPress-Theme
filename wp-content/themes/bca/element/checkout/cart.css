@@ -1,0 +1,10 @@
+/* line 4, ../../sass/element/checkout/cart.scss */
+.woocommerce-cart #secondary,
+.woocommerce-checkout #secondary {
+  display: none !important;
+}
+
+/* line 9, ../../sass/element/checkout/cart.scss */
+.cart_totals p {
+  clear: both;
+}

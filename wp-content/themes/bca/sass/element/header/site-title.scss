@@ -1,0 +1,53 @@
+h1.site-title{
+  position: absolute;
+  z-index: 100;
+    background-size: contain;
+    margin: 0 auto;
+
+}
+
+#page{
+  padding-top: 25px;
+}
+
+@media only screen and (max-width: 768px) {
+  .top-bar-container {
+    padding-bottom: .3em;
+  }
+  .site-branding{
+  padding-bottom: .5em;
+
+  }
+}
+@media only screen and (min-width: 768px) {
+  h1.site-title{
+    position: relative;
+  }
+}
+@media only screen and (max-width: 58.75em) {
+  h1.site-title{
+      width: 200px;
+      height: 33px;
+  }
+}
+@media only screen and (max-width: 58.75em) and (min-width: 768px) {
+  #page{
+    padding-top: 43px;
+  }
+  h1.site-title{
+      width: 380px;
+      height: 39px;
+  }
+}
+@media only screen and (min-width: 58.75em) {
+  .site-branding{
+    height: 85px;
+  }
+  #page{
+    padding-top: 163px;
+  }
+  h1.site-title{
+      width: 594px;
+      height: 98px;
+  }
+}

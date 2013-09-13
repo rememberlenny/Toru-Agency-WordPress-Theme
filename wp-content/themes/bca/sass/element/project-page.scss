@@ -1,0 +1,39 @@
+$dark-grey: #222;
+
+.single{
+  h2, h3{
+    color: $dark-grey;
+  }
+  .content-intro{
+    margin-top: 1em;
+    h2{
+      font-size: 2.375em;
+      text-transform: uppercase;
+      font-weight: normal;
+      margin-bottom: 0em;
+      margin-top: 0em;
+    }
+    h3.subheader{
+      font-size: 1.5em;
+      font-weight: normal;
+    }
+    p{
+      margin-top: .3em;
+    }
+  }
+}
+
+body .wooslider .wooslider-control-nav.wooslider-control-thumbs{
+  margin-bottom: 0em;
+
+  li{
+    margin-bottom: 0em;
+  }
+}
+
+#isotopin{
+  img{
+    width: 100%;
+    display: block;
+  }
+}
