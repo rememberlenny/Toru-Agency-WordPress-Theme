@@ -64,7 +64,7 @@
 		    <?php while(the_repeater_field('secondary_video_repeat')): ?>
 		    <div class="row content-secondary-video">
 					 <div class="column">
-						 <?php echo '<iframe src="//player.vimeo.com/video/' . get_sub_field('secondary_video_repeat') . ' width="950" height="400" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>';?> 
+						 <?php echo '<iframe src="//player.vimeo.com/video/' . get_sub_field('secondary_video_repeat') . '" width="950" height="400" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>';?> 
 					 </div>
 		    </div>
 		    <?php endwhile; ?>
