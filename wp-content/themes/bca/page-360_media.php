@@ -13,8 +13,8 @@
 
 get_header(); 
 
-if(have_posts()) : 
-  while(have_posts( { 'post-type': '360_media' })) : 
+if(have_posts()): 
+  while(have_posts( { 'post-type': '360_media' })): 
 
     the_post(); 
 
