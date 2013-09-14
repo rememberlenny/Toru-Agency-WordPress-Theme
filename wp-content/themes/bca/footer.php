@@ -91,9 +91,7 @@
         jQuery('#isotopin').isotope({ filter: '' }).isotope('shuffle').isotope({ filter: '.360_media' });
       });
     } 
-    else {
-
-(function($){
+    (function($){
 
 
     $(window).load(function(){      
@@ -300,8 +298,6 @@
       });
 
     }(jQuery));
-
-    }
   }
   this.hashCheck = hashCheck();
   window.onload = window.hashCheck;

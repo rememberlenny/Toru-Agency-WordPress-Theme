@@ -14,7 +14,7 @@
 get_header(); ?>
 
 
-	<div id="primary" class="content-area" style="margin-top: 20px;">
+	<div id="primary" class="content-area">
 		
     <div class="">
       <div class=" large-12" id="isotopin">
