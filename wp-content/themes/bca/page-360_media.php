@@ -14,7 +14,7 @@
 get_header(); 
 
 if(have_posts()): 
-  while(have_posts( { 'post-type': '360_media' })): 
+  while(have_posts( { 'post-type': '360_media' })){ 
 
     the_post(); 
 
@@ -26,7 +26,7 @@ if(have_posts()):
 
     echo '</div>'; 
 
-  endwhile; 
+  }
 endif; 
 
 get_footer(); ?>
