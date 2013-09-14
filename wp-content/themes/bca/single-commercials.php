@@ -14,8 +14,6 @@ get_header(); ?>
 
 			<?php get_template_part( 'content', 'video' ); ?>
 
-			<?php bullettshop_content_nav( 'nav-below' ); ?>
-
 		<?php endwhile; // end of the loop. ?>
 
 		</main><!-- #main -->
