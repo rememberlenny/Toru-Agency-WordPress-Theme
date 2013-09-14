@@ -42,7 +42,58 @@
 
 <script>
 
-   (function($){
+
+
+  function hideSlider(){
+    if (jQuery('#slide-case').css("visibility", "hidden")){
+     // jQuery('#slide-case').slideUp();
+    }
+  };
+
+  function hashCheck(){
+    if(location.hash == '#photography'){
+      jQuery('#isotopin').isotope({ filter: '' }).isotope( 'reLayout', function(){
+        jQuery('#isotopin').isotope({ filter: '' }).isotope('shuffle').isotope({ filter: '.photography' });
+      });
+    }
+    else if(location.hash == '#video'){
+      jQuery('#isotopin').isotope({ filter: '' }).isotope( 'reLayout', function(){
+        jQuery('#isotopin').isotope('shuffle').isotope({ filter: '.short-films, .fashions, .commercials' });
+      } );
+    }
+    else if(location.hash == '#short-film'){
+      jQuery('#isotopin').isotope({ filter: '' }).isotope( 'reLayout', function(){
+        jQuery('#isotopin').isotope('shuffle').isotope({ filter: '.short-films' });
+      } );
+    }
+    else if(location.hash == '#commercial'){
+      jQuery('#isotopin').isotope({ filter: '' }).isotope( 'reLayout', function(){
+        jQuery('#isotopin').isotope('shuffle').isotope({ filter: '.commercials' });
+      } );
+    }
+    else if(location.hash == '#fashion'){
+      jQuery('#isotopin').isotope({ filter: '' }).isotope( 'reLayout', function(){
+        jQuery('#isotopin').isotope('shuffle').isotope({ filter: '.fashions' });
+      } );
+    }
+    else if(location.hash == '#design'){
+      jQuery('#isotopin').isotope({ filter: '' }).isotope( 'reLayout', function(){
+        jQuery('#isotopin').isotope({ filter: '' }).isotope('shuffle').isotope({ filter: '.designs' });
+      });
+    }
+    else if(location.hash == '#interactive'){
+      jQuery('#isotopin').isotope({ filter: '' }).isotope( 'reLayout', function(){
+        jQuery('#isotopin').isotope({ filter: '' }).isotope('shuffle').isotope({ filter: '.interactive' });
+      });
+    }
+    else if(location.hash == '#360media'){
+      jQuery('#isotopin').isotope({ filter: '' }).isotope( 'reLayout', function(){
+        jQuery('#isotopin').isotope({ filter: '' }).isotope('shuffle').isotope({ filter: '.360_media' });
+      });
+    } 
+    else {
+
+(function($){
 
 
     $(window).load(function(){      
@@ -250,59 +301,6 @@
 
     }(jQuery));
 
-  function hideSlider(){
-    if (jQuery('#slide-case').css("visibility", "hidden")){
-     // jQuery('#slide-case').slideUp();
-    }
-  };
-
-  function hashCheck(){
-    if(location.hash == '#photography'){
-      jQuery('#isotopin').isotope({ filter: '' }).isotope( 'reLayout', function(){
-        jQuery('#isotopin').isotope({ filter: '' }).isotope('shuffle').isotope({ filter: '.photography' });
-      });
-    }
-    else if(location.hash == '#video'){
-      jQuery('#isotopin').isotope({ filter: '' }).isotope( 'reLayout', function(){
-        jQuery('#isotopin').isotope('shuffle').isotope({ filter: '.short-films, .fashions, .commercials' });
-      } );
-    }
-    else if(location.hash == '#short-film'){
-      jQuery('#isotopin').isotope({ filter: '' }).isotope( 'reLayout', function(){
-        jQuery('#isotopin').isotope('shuffle').isotope({ filter: '.short-films' });
-      } );
-    }
-    else if(location.hash == '#commercial'){
-      jQuery('#isotopin').isotope({ filter: '' }).isotope( 'reLayout', function(){
-        jQuery('#isotopin').isotope('shuffle').isotope({ filter: '.commercials' });
-      } );
-    }
-    else if(location.hash == '#fashion'){
-      jQuery('#isotopin').isotope({ filter: '' }).isotope( 'reLayout', function(){
-        jQuery('#isotopin').isotope('shuffle').isotope({ filter: '.fashions' });
-      } );
-    }
-    else if(location.hash == '#design'){
-      jQuery('#isotopin').isotope({ filter: '' }).isotope( 'reLayout', function(){
-        jQuery('#isotopin').isotope({ filter: '' }).isotope('shuffle').isotope({ filter: '.designs' });
-      });
-    }
-    else if(location.hash == '#interactive'){
-      jQuery('#isotopin').isotope({ filter: '' }).isotope( 'reLayout', function(){
-        jQuery('#isotopin').isotope({ filter: '' }).isotope('shuffle').isotope({ filter: '.interactive' });
-      });
-    }
-    else if(location.hash == '#360media'){
-      jQuery('#isotopin').isotope({ filter: '' }).isotope( 'reLayout', function(){
-        jQuery('#isotopin').isotope({ filter: '' }).isotope('shuffle').isotope({ filter: '.360_media' });
-      });
-    } 
-    else {
-      jQuery('#isotopin').isotope({
-        masonry: {
-          columnWidth: 20
-        }
-      });
     }
   }
   this.hashCheck = hashCheck();
