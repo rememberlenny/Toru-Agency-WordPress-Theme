@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Photography Page
+ * Template Name: 360 Media Page
  * The template for displaying home page.
  *
  * This is the template that displays all pages by default.
@@ -14,7 +14,7 @@
 get_header(); 
 
 if(have_posts()) : 
-  while(have_posts( { 'post-type': 'photography' })) : 
+  while(have_posts( { 'post-type': '360_media' })) : 
 
     the_post(); 
 
