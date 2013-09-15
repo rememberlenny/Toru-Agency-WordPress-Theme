@@ -1,5 +1,13 @@
-.single .wooslider-control-nav{
-  display: none;
+.single{
+  .wooslider{
+    margin-bottom: 0px;
+  }
+  .wooslider-control-nav{
+    display: none;
+  }
+  .content-intro{
+    margin-bottom:1em;
+  }
 }
 
 /* Start: Recommended Isotope styles */

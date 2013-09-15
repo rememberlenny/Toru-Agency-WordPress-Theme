@@ -9508,26 +9508,34 @@ label {
   margin-right: 5px;
 }
 
-/* line 1, sass/element/project-page.scss */
+/* line 2, sass/element/project-page.scss */
+.single .wooslider {
+  margin-bottom: 0px;
+}
+/* line 5, sass/element/project-page.scss */
 .single .wooslider-control-nav {
   display: none;
+}
+/* line 8, sass/element/project-page.scss */
+.single .content-intro {
+  margin-bottom: 1em;
 }
 
 /* Start: Recommended Isotope styles */
 /**** Isotope Filtering ****/
-/* line 9, sass/element/project-page.scss */
+/* line 17, sass/element/project-page.scss */
 .isotope-item {
   z-index: 2;
 }
 
-/* line 13, sass/element/project-page.scss */
+/* line 21, sass/element/project-page.scss */
 .isotope-hidden.isotope-item {
   pointer-events: none;
   z-index: 1;
 }
 
 /**** Isotope CSS3 transitions ****/
-/* line 21, sass/element/project-page.scss */
+/* line 29, sass/element/project-page.scss */
 .isotope,
 .isotope .isotope-item {
   -webkit-transition-duration: 0.8s;
@@ -9535,29 +9543,29 @@ label {
   transition-duration: 0.8s;
 }
 
-/* line 27, sass/element/project-page.scss */
+/* line 35, sass/element/project-page.scss */
 .isotope {
   -webkit-transition-property: height, width;
   -moz-transition-property: height, width;
   transition-property: height, width;
 }
 
-/* line 33, sass/element/project-page.scss */
+/* line 41, sass/element/project-page.scss */
 .isotope .isotope-item {
   -webkit-transition-property: -webkit-transform, opacity;
   -moz-transition-property: -moz-transform, opacity;
   transition-property: transform, opacity;
 }
 
-/* line 43, sass/element/project-page.scss */
+/* line 51, sass/element/project-page.scss */
 .single h2, .single h3 {
   color: #222222;
 }
-/* line 46, sass/element/project-page.scss */
+/* line 54, sass/element/project-page.scss */
 .single .content-intro {
   margin-top: 1em;
 }
-/* line 48, sass/element/project-page.scss */
+/* line 56, sass/element/project-page.scss */
 .single .content-intro h2 {
   font-size: 2.375em;
   text-transform: uppercase;
@@ -9565,26 +9573,26 @@ label {
   margin-bottom: 0em;
   margin-top: 0em;
 }
-/* line 55, sass/element/project-page.scss */
+/* line 63, sass/element/project-page.scss */
 .single .content-intro h3.subheader {
   font-size: 1.5em;
   font-weight: normal;
 }
-/* line 59, sass/element/project-page.scss */
+/* line 67, sass/element/project-page.scss */
 .single .content-intro p {
   margin-top: .3em;
 }
 
-/* line 65, sass/element/project-page.scss */
+/* line 73, sass/element/project-page.scss */
 body .wooslider .wooslider-control-nav.wooslider-control-thumbs {
   margin-bottom: 0em;
 }
-/* line 68, sass/element/project-page.scss */
+/* line 76, sass/element/project-page.scss */
 body .wooslider .wooslider-control-nav.wooslider-control-thumbs li {
   margin-bottom: 0em;
 }
 
-/* line 74, sass/element/project-page.scss */
+/* line 82, sass/element/project-page.scss */
 #isotopin img {
   width: 100%;
   display: block;
