@@ -82,7 +82,7 @@
 			<?php if(get_field('project_secondary_photo_slider')): ?>
 			<div class="row content-secondary-slider">
 				<div class="large-12 column">
-					<?php the_field('project_secondary_photo_slider'); ?>
+					<?php wooslider(); ?>
 				</div>
 			</div>
 			<?php endif; ?>

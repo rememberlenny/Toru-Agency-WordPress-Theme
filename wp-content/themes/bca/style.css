@@ -7245,6 +7245,11 @@ body.login #login h1 a {
   background-size: contain !important;
 }
 
+/* line 6, sass/base/admin/login.scss */
+#acf-project_secondary_photo_slider .wp-editor-container {
+  display: none !important;
+}
+
 /* line 1, sass/base/layout/typography.scss */
 p {
   font-family: Garamond, "Adobe Garamond", Georgia, Times, serif;
