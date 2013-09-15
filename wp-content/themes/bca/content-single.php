@@ -6,57 +6,84 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<h1 class="entry-title"><?php the_title(); ?></h1>
 
-		<div class="entry-meta">
-			<?php bullettshop_posted_on(); ?>
-		</div><!-- .entry-meta -->
-	</header><!-- .entry-header -->
+			
+			<!-- If none -->
+			<div class="row" style="margin-top: 1em;">
+			<!-- If video -->
+				<?php if (get_field('vimeo_video_number')): ?>
+					<div class="column large-12 small-12">
+						 <iframe src="//player.vimeo.com/video/<?php the_field('vimeo_video_number') ?>" width="950" height="400" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+						 </iframe> 
+					</div>
+				<?php endif; ?>
 
-	<div class="entry-content">
-		<?php the_content(); ?>
-		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'bullettshop' ),
-				'after'  => '</div>',
-			) );
-		?>
-	</div><!-- .entry-content -->
+				<!-- If slider -->
+				<?php if (get_field('project_image_head')): ?>
+					<div class="column large-12 small-12">
+						<?php the_field('project_image_head'); ?>
+					</div>
+				<?php endif; ?>
+				<!-- End if -->
+			</div>
 
-	<footer class="entry-meta">
-		<?php
-			/* translators: used between list items, there is a space after the comma */
-			$category_list = get_the_category_list( __( ', ', 'bullettshop' ) );
+			<div class="row content-intro">
+				<div class="large-6 column">
+					<h2>
+						<?php the_title(); ?>
+					</h2>
+					<h3 class="subheader">
+						<?php if(get_field('project_purpose')):
+							the_field('project_purpose');
+						endif; ?>
+					</h3>	
+				</div>
 
-			/* translators: used between list items, there is a space after the comma */
-			$tag_list = get_the_tag_list( '', __( ', ', 'bullettshop' ) );
+				<div class="large-6 column">
+					<p>
+						<?php if(get_field('project_description')):
+							the_field('project_description');
+						endif; ?>
+					</p>
+				</div>
 
-			if ( ! bullettshop_categorized_blog() ) {
-				// This blog only has 1 category so we just need to worry about tags in the meta text
-				if ( '' != $tag_list ) {
-					$meta_text = __( 'This entry was tagged %2$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'bullettshop' );
-				} else {
-					$meta_text = __( 'Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'bullettshop' );
-				}
+			</div>
+			</header><!-- .entry-header -->
+			<div class="entry-content"> 
+			
 
-			} else {
-				// But this blog has loads of categories so we should probably display them here
-				if ( '' != $tag_list ) {
-					$meta_text = __( 'This entry was posted in %1$s and tagged %2$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'bullettshop' );
-				} else {
-					$meta_text = __( 'This entry was posted in %1$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'bullettshop' );
-				}
+			<?php if(get_field('secondary_image_slider')): ?>
+	    	<div class="row content-secondary-slider">
+					<div class="large-12 column">
+						<?php the_field('secondary_image_slider'); ?>
+					</div>
+				</div>
+			<?php endif; ?>
+			
+			<?php if(get_field('secondary_video_conditional')): ?>
+		    <?php while(the_repeater_field('secondary_video_repeat')): ?>
+		    <div class="row content-secondary-video">
+					 <div class="column">
+						 <?php echo '<iframe src="//player.vimeo.com/video/' . get_sub_field('secondary_video_repeat') . '" width="950" height="400" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>';?> 
+					 </div>
+		    </div>
+		    <?php endwhile; ?>
+			<?php endif; ?>
 
-			} // end check for categories on this blog
+			<?php if(get_field('secondary_image_conditional')): ?>
+		    <?php while(the_repeater_field('secondary_image_repeat')): ?>
+					<div class="row content-secondary-image">
+						<div class="column">
+							<?php echo '<img src="' . get_sub_field('secondary_image_repeat') .'" alt="'. get_sub_field('secondary_image_repeat') . '">';?>
+						</div>
+			    </div>
+		    <?php endwhile; ?>
+			 <?php endif; ?>
+			<hr>
+		
+			<?php show_related_products(); ?>
 
-			printf(
-				$meta_text,
-				$category_list,
-				$tag_list,
-				get_permalink(),
-				the_title_attribute( 'echo=0' )
-			);
-		?>
+			</div><!-- .entry-content -->
 
 		<?php // edit_post_link( __( 'Edit', 'bullettshop' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-meta -->
