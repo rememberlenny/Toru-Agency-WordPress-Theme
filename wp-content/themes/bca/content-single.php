@@ -18,18 +18,14 @@
 					</div>
 				<?php endif; ?>
 
-				<?php if (get_field('photo_slider_condition')): ?>
-					<div class="column large-12 small-12">
-						<?php woo_slider(); ?>
-					</div>
-				<?php endif; ?>
+
 
 				<!-- If slider -->
-				<?php if (get_field('project_image_head')): ?>
+
 					<div class="column large-12 small-12">
-						<?php the_field('project_image_head'); ?>
+						<?php wooslider(); ?>
 					</div>
-				<?php endif; ?>
+
 				<!-- End if -->
 			</div>
 
