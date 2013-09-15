@@ -1,6 +1,6 @@
 /* line 2, ../sass/element/project-page.scss */
 .single .wooslider {
-  margin-bottom: 0px;
+  margin-bottom: 0px !important;
 }
 /* line 5, ../sass/element/project-page.scss */
 .single .wooslider-control-nav {
