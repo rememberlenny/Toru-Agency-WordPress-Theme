@@ -18,7 +18,7 @@
 					</div>
 				<?php endif; ?>
 
-				<?php if (get_field('project_secondary_photo_slider')): ?>
+				<?php if (get_field('photo_slider_condition')): ?>
 					<div class="column large-12 small-12">
 						<?php woo_slider(); ?>
 					</div>
