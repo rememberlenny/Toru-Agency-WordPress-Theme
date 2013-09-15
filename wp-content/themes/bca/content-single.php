@@ -20,7 +20,7 @@
 
 				<?php if (get_field('project_secondary_photo_slider')): ?>
 					<div class="column large-12 small-12">
-						<?php the_field('project_secondary_photo_slider'); ?>
+						<?php woo_slider(); ?>
 					</div>
 				<?php endif; ?>
 
