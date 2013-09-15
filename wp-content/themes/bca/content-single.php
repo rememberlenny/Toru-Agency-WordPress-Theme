@@ -51,6 +51,13 @@
 			</header><!-- .entry-header -->
 			<div class="entry-content"> 
 			
+			<?php if(get_field('photo_slider_condition')): ?>
+			<div class="row content-secondary-slider">
+				<div class="large-12 column">
+					<?php wooslider(); ?>
+				</div>
+			</div>
+			<?php endif; ?>
 
 			<?php if(get_field('secondary_image_slider')): ?>
 	    	<div class="row content-secondary-slider">
@@ -79,13 +86,7 @@
 			    </div>
 		    <?php endwhile; ?>
 			 <?php endif; ?>
-			<?php if(get_field('project_secondary_photo_slider')): ?>
-			<div class="row content-secondary-slider">
-				<div class="large-12 column">
-					<?php wooslider(); ?>
-				</div>
-			</div>
-			<?php endif; ?>
+
 			<hr>
 			
 			<?php show_related_products(); ?>
