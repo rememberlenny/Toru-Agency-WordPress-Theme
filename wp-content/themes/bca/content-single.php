@@ -79,8 +79,15 @@
 			    </div>
 		    <?php endwhile; ?>
 			 <?php endif; ?>
+			<?php if(get_field('project_secondary_photo_slider')): ?>
+			<div class="row content-secondary-slider">
+				<div class="large-12 column">
+					<?php the_field('project_secondary_photo_slider'); ?>
+				</div>
+			</div>
+			<?php endif; ?>
 			<hr>
-		
+			
 			<?php show_related_products(); ?>
 
 			</div><!-- .entry-content -->
