@@ -21,11 +21,11 @@
 
 
 				<!-- If slider -->
-
+				<?php if (get_field('photo_slider_condition') == 'Active'): ?>
 					<div class="column large-12 small-12">
 						<?php wooslider(); ?>
 					</div>
-
+				<?php endif; ?>
 				<!-- End if -->
 			</div>
 
