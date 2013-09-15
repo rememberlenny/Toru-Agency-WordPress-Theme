@@ -18,9 +18,9 @@
 					</div>
 				<?php endif; ?>
 
-				<?php if (get_field('primary_slider_number')): ?>
+				<?php if (get_field('project_secondary_photo_slider')): ?>
 					<div class="column large-12 small-12">
-						<?php the_field('primary_slider_number'); ?>
+						<?php the_field('project_secondary_photo_slider'); ?>
 					</div>
 				<?php endif; ?>
 
