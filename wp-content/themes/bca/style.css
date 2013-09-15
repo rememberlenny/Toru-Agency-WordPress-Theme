@@ -7246,7 +7246,7 @@ body.login #login h1 a {
 }
 
 /* line 6, sass/base/admin/login.scss */
-#acf-project_secondary_photo_slider table.mceLayout {
+#acf-project_secondary_photo_slider table {
   display: none !important;
 }
 
