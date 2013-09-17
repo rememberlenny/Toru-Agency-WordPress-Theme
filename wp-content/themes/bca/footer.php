@@ -217,11 +217,6 @@
 
             });  
 
-            $container.masonry({
-                columnWidth: 1,
-                isAnimated: true,
-            });
-
             $photobutton.click( function(){
               hideSlider();
               if(!location.hash == ''){
