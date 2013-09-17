@@ -212,7 +212,8 @@
 
             $container.isotope({
               masonry: {
-                gutterWidth: 10
+                  columnWidth: 110,
+                  gutterWidth: 10
               }
 
             });  
