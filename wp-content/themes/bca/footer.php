@@ -212,9 +212,15 @@
 
             $container.isotope({
               masonry: {
-                columnWidth: 20
+                columnWidth: 1
               }
+
             });  
+
+            $container.masonry({
+                columnWidth: 1,
+                isAnimated: true,
+            });
 
             $photobutton.click( function(){
               hideSlider();
