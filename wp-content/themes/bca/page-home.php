@@ -21,7 +21,7 @@ get_header(); ?>
         <?php 
           query_posts( array( 
             'posts_per_page' => -1, 
-            'post_type' => array( 'photography', 'videos', 'interactives', 'designs', '360_media', 'fashions' , 'commercials' , 'short-films' ), 
+            'post_type' => array( 'photography', 'interactives', 'designs', '360_media', 'fashions' , 'commercials' , 'short-films' ), 
             'paged' => get_query_var( 'paged' ) 
           ) );
         ?>
