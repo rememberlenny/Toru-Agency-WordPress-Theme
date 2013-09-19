@@ -75,17 +75,17 @@
     }
     else if(location.hash == '#design'){
       jQuery('#isotopin').isotope({ filter: '' }).isotope( 'reLayout', function(){
-        jQuery('#isotopin').isotope({ filter: '' }).isotope('shuffle').isotope({ filter: '.designs' });
+        jQuery('#isotopin').isotope('shuffle').isotope({ filter: '.designs' });
       });
     }
     else if(location.hash == '#interactive'){
       jQuery('#isotopin').isotope({ filter: '' }).isotope( 'reLayout', function(){
-        jQuery('#isotopin').isotope({ filter: '' }).isotope('shuffle').isotope({ filter: '.interactive' });
+        jQuery('#isotopin').isotope('shuffle').isotope({ filter: '.interactive' });
       });
     }
     else if(location.hash == '#360media'){
       jQuery('#isotopin').isotope({ filter: '' }).isotope( 'reLayout', function(){
-        jQuery('#isotopin').isotope({ filter: '' }).isotope('shuffle').isotope({ filter: '.360_media' });
+        jQuery('#isotopin').isotope('shuffle').isotope({ filter: '.360_media' });
       });
     } 
     (function($){
@@ -100,7 +100,7 @@
             var center_x = (offset.left) + ( circleCenterX );
             var center_y = (offset.top) + ( circleCenterY );
             var mouse_x = e.pageX; 
-            var mouse_y = e.pageY*20;
+            var mouse_y = e.pageY*25;
 
             var radians = 2*Math.atan2(mouse_x - center_x, center_y - mouse_y);
 
