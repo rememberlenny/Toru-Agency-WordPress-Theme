@@ -109,7 +109,7 @@ add_action( 'wp_enqueue_scripts', 'bullettshop_scripts' );
 /**
  * Custom template tags for this theme.
  */
-require get_template_directory() . '/atriangle/slider.php';
+require get_template_directory() . '/at-modules/slider.php';
 
 /**
  * Custom template tags for this theme.

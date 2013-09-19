@@ -1,4 +1,4 @@
-<?php // add_action('atc_precontent', 'atc_precontent_slider'); ?>
+<?php add_action('atc_precontent', 'atc_precontent_slider'); ?>
 
 <?php function atc_precontent_slider(){ ?>
 
