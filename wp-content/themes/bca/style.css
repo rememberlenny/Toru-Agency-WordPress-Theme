@@ -9630,13 +9630,14 @@ body .wooslider .wooslider-control-nav.wooslider-control-thumbs li {
   margin-left: 2em;
   display: inline-block;
   background-size: contain !important;
-  width: 270px;
+  width: 240px;
   height: 20px;
   margin-bottom: 2px;
   background-repeat: no-repeat !important;
+  float: right;
 }
 
-/* line 31, sass/element/footer/foot.scss */
+/* line 32, sass/element/footer/foot.scss */
 .privacy-links {
   opacity: .6;
   display: inline-block;

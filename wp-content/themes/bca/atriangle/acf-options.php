@@ -10,12 +10,12 @@ function acf_options_modification(){
 
    if( function_exists('acf_set_options_page_title') )
    {
-       acf_set_options_page_title( 'Image Slider' );
+       acf_set_options_page_title( 'Home Image Slider' );
    }
 
    if( function_exists('acf_set_options_page_menu') )
    {
-       acf_set_options_page_menu( 'Image Slider' );
+       acf_set_options_page_menu( 'Home Image Slider' );
    }
 
    if( function_exists('acf_set_options_page_title') )
