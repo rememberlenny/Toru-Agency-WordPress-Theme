@@ -138,7 +138,11 @@ $primary-color: #000;
 // Grid Variables
 //
 
-$row-width: emCalc(950);
+.row{
+  padding-left: 10px;
+}
+
+$row-width: emCalc(1090);
 // $column-gutter: emCalc(30);
 // $total-columns: 12;
 

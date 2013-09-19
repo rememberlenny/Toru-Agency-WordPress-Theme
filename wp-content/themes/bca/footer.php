@@ -20,19 +20,12 @@
       <a href="http://bullettmedia.com">
         <div class="logo"></div>
       </a>
+
+      <a href="http://shop.bullettmedia.com">
+        <div class="shoplogo" style="background: url('<?php the_field('shoplogo','options')?>')"></div>
+      </a>
     </div>
-    <div class="row text-center">
-      <ul class="inline-list text-center privacy-links" style="">
-        <li>
-          <a href="http://shop.bullettmedia.com/privacy-policy/">Privacy</a>
-        </li>
-        <li>|</li>
-        <li>
-          <a href="http://shop.bullettmedia.com/store-policy/">Store Policy</a>
-        </li>
-      </ul>
-    </div>
-    
+
 
   </footer><!-- #colophon -->
 </div><!-- #page -->
@@ -46,7 +39,7 @@
 
   function hideSlider(){
     if (jQuery('#slide-case').css("visibility", "hidden")){
-     // jQuery('#slide-case').slideUp();
+     jQuery('#slide-case').slideUp();
     }
   };
 
@@ -169,9 +162,9 @@
               // initialize isotope
 
             function forceReload( contentsReload ){
-              jQuery('#isotopin').isotope({ filter: '' }).isotope( 'reLayout', function(){
+              // jQuery('#isotopin').isotope({ filter: '' }).isotope( 'reLayout', function(){
                 contentsReload();
-              });
+              // });
             }
 
             function photographyLoad(){
@@ -211,9 +204,20 @@
             }
 
             $container.isotope({
-              masonry: {
-                  columnWidth: 110,
-                  gutterWidth: 10
+              itemSelector : '.element',
+              masonry : {
+                columnWidth : 120
+              },
+              masonryHorizontal : {
+                rowHeight: 120
+              },
+              cellsByRow : {
+                columnWidth : 240,
+                rowHeight : 240
+              },
+              cellsByColumn : {
+                columnWidth : 240,
+                rowHeight : 240
               }
 
             });  
@@ -291,8 +295,10 @@
               });
 
             $homebutton.click( function(){
-              hideSlider();
-              homeLoad();
+              jQuery('#isotopin').isotope({ filter: '' }).isotope( 'reLayout', function(){
+                jQuery('#isotopin').isotope({ filter: '' }).isotope( 'reLayout', function(){});
+              });
+              return false;
             });
 
         });
