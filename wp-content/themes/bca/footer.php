@@ -106,7 +106,7 @@
 
             circle.css('-moz-transform', 'rotate('+radians+'rad)');
             circle.css('-webkit-transform', 'rotate('+radians+'rad)');
-          circle.css('-o-transform', 'rotate('+radians+'rad)');
+            circle.css('-o-transform', 'rotate('+radians+'rad)');
             circle.css('-ms-transform', 'rotate('+radians+'rad)');
 
           }

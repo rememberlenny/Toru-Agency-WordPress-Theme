@@ -4,8 +4,22 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<div class="large-6 column"></div>
+<article style="margin-bottom:1em;" id="post-<?php the_ID(); ?>" <?php post_class('row'); ?>>
+	<div class="large-6 column">
+		<?php 
+		  $classes = array(
+		    'element'
+		  );
+		  $tn_id = get_post_thumbnail_id( $post->ID );
+		  $img = wp_get_attachment_image_src( $tn_id, 'full' );
+		  $image = $img[0];
+		  $width = $img[1];
+		  $height = $img[2];
+		?>
+		<a href="<?php the_permalink(); ?>" rel="bookmark">
+			<img src="<?php echo $image ?>" alt="">
+		</a>
+	</div>
 	<div class="large-6 column">
 		<header class="entry-header">
 			<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
