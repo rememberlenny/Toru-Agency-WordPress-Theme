@@ -100,7 +100,7 @@
             var center_x = (offset.left) + ( circleCenterX );
             var center_y = (offset.top) + ( circleCenterY );
             var mouse_x = e.pageX; 
-            var mouse_y = e.pageY*50;
+            var mouse_y = e.pageY*20;
 
             var radians = 2*Math.atan2(mouse_x - center_x, center_y - mouse_y);
 
