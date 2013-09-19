@@ -21,6 +21,7 @@ get_header(); ?>
         get_template_part( 'content', 'single' );
 
       } 
+      ?>
 
 			<?php bullettshop_content_nav( 'nav-below' ); ?>
 
