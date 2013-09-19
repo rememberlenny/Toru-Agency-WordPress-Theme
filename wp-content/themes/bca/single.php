@@ -12,7 +12,7 @@ get_header(); ?>
 
 		<?php while ( have_posts() ) : the_post(); ?>
         
-      <?php if(post_type == 'post'){
+      <?php if('post' == get_post_type()){
 
         get_template_part( 'content', 'single-post' );
 
