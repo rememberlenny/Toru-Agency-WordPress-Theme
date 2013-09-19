@@ -4,87 +4,73 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
+<article style="margin-bottom:1em;" id="post-<?php the_ID(); ?>" <?php post_class('row'); ?>>
+	<div class="large-6 column">
+		<?php 
+		  $classes = array(
+		    'element'
+		  );
+		  $tn_id = get_post_thumbnail_id( $post->ID );
+		  $img = wp_get_attachment_image_src( $tn_id, 'full' );
+		  $image = $img[0];
+		  $width = $img[1];
+		  $height = $img[2];
+		?>
+		<a href="<?php the_permalink(); ?>" rel="bookmark">
+			<img src="<?php echo $image ?>" alt="">
+		</a>
+	</div>
+	<div class="large-6 column">
+		<header class="entry-header">
+			<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 
-			
-			<!-- If none -->
-			<div class="row" style="margin-top: 1em;">
-			<!-- If video -->
-				<?php if (get_field('vimeo_video_number')): ?>
-					<div class="column large-12 small-12">
-						 <iframe src="//player.vimeo.com/video/<?php the_field('vimeo_video_number') ?>" width="950" height="400" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-						 </iframe> 
-					</div>
-				<?php endif; ?>
-
-				<!-- If slider -->
-				<?php if (get_field('project_image_head')): ?>
-					<div class="column large-12 small-12">
-						<?php the_field('project_image_head'); ?>
-					</div>
-				<?php endif; ?>
-				<!-- End if -->
-			</div>
-
-			<div class="row content-intro">
-				<div class="large-6 column">
-					<h2>
-						<?php the_title(); ?>
-					</h2>
-					<h3 class="subheader">
-						<?php if(get_field('project_purpose')):
-							the_field('project_purpose');
-						endif; ?>
-					</h3>	
-				</div>
-
-				<div class="large-6 column">
-					<p>
-						<?php if(get_field('project_description')):
-							the_field('project_description');
-						endif; ?>
-					</p>
-				</div>
-
-			</div>
-			</header><!-- .entry-header -->
-			<div class="entry-content"> 
-			
-
-			<?php if(get_field('secondary_image_slider')): ?>
-	    	<div class="row content-secondary-slider">
-					<div class="large-12 column">
-						<?php the_field('secondary_image_slider'); ?>
-					</div>
-				</div>
+			<?php if ( 'post' == get_post_type() ) : ?>
+			<div class="entry-meta">
+				<?php bullettshop_posted_on(); ?>
+			</div><!-- .entry-meta -->
 			<?php endif; ?>
-			
-			<?php if(get_field('secondary_video_conditional')): ?>
-		    <?php while(the_repeater_field('secondary_video_repeat')): ?>
-		    <div class="row content-secondary-video">
-					 <div class="column">
-						 <?php echo '<iframe src="//player.vimeo.com/video/' . get_sub_field('secondary_video_repeat') . '" width="950" height="400" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>';?> 
-					 </div>
-		    </div>
-		    <?php endwhile; ?>
-			<?php endif; ?>
+		</header><!-- .entry-header -->
 
-			<?php if(get_field('secondary_image_conditional')): ?>
-		    <?php while(the_repeater_field('secondary_image_repeat')): ?>
-					<div class="row content-secondary-image">
-						<div class="column">
-							<?php echo '<img src="' . get_sub_field('secondary_image_repeat') .'" alt="'. get_sub_field('secondary_image_repeat') . '">';?>
-						</div>
-			    </div>
-		    <?php endwhile; ?>
-			 <?php endif; ?>
-			<hr>
-		
-			<?php show_related_products(); ?>
+		<?php if ( is_search() ) : // Only display Excerpts for Search ?>
+		<div class="entry-summary">
+			<?php the_excerpt(); ?>
+		</div><!-- .entry-summary -->
+		<?php else : ?>
+		<div class="entry-content">
+			<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'bullettshop' ) ); ?>
+			<?php
+				wp_link_pages( array(
+					'before' => '<div class="page-links">' . __( 'Pages:', 'bullettshop' ),
+					'after'  => '</div>',
+				) );
+			?>
+		</div><!-- .entry-content -->
+		<?php endif; ?>
 
-			</div><!-- .entry-content -->
+		<footer class="entry-meta">
+			<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search ?>
+				<?php
+					/* translators: used between list items, there is a space after the comma */
+					$categories_list = get_the_category_list( __( ', ', 'bullettshop' ) );
+					if ( $categories_list && bullettshop_categorized_blog() ) :
+				?>
+				<span class="cat-links">
+					<?php printf( __( 'Posted in %1$s', 'bullettshop' ), $categories_list ); ?>
+				</span>
+				<?php endif; // End if categories ?>
 
-		<?php // edit_post_link( __( 'Edit', 'bullettshop' ), '<span class="edit-link">', '</span>' ); ?>
-	</footer><!-- .entry-meta -->
+				<?php
+					/* translators: used between list items, there is a space after the comma */
+					$tags_list = get_the_tag_list( '', __( ', ', 'bullettshop' ) );
+					if ( $tags_list ) :
+				?>
+				<span class="tags-links">
+					<?php printf( __( 'Tagged %1$s', 'bullettshop' ), $tags_list ); ?>
+				</span>
+				<?php endif; // End if $tags_list ?>
+			<?php endif; // End if 'post' == get_post_type() ?>
+
+			<?php // edit_post_link( __( 'Edit', 'bullettshop' ), '<span class="edit-link">', '</span>' ); ?>
+		</footer><!-- .entry-meta -->
+	</div>
 </article><!-- #post-## -->
