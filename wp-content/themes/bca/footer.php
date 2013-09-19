@@ -17,13 +17,14 @@
       <a href="#back-top">▲ Back to Top</a>
     </div>
     <div class="foot">
-      <a href="http://bullettmedia.com">
-        <div class="logo"></div>
-      </a>
-
-      <a href="http://shop.bullettmedia.com">
-        <div class="shoplogo" style="background: url('<?php the_field('shoplogo','options')?>')"></div>
-      </a>
+      <div class="logocase">
+        <a href="http://bullettmedia.com">
+          <div class="logo"></div>
+        </a>
+        <a href="http://shop.bullettmedia.com">
+          <div class="shoplogo" style="background: url('<?php the_field('shoplogo','options')?>')"></div>
+        </a>
+      </div>
     </div>
 
 
@@ -34,8 +35,6 @@
 
 
 <script>
-
-
 
   function hideSlider(){
     if (jQuery('#slide-case').css("visibility", "hidden")){
@@ -86,65 +85,7 @@
     } 
     (function($){
 
-
     $(window).load(function(){      
-
-        // $.Isotope.prototype._getCenteredMasonryColumns = function() {
-        //   this.width = this.element.width();
-          
-        //   var parentWidth = this.element.parent().width();
-          
-        //                 // i.e. options.masonry && options.masonry.columnWidth
-        //   var colW = this.options.masonry && this.options.masonry.columnWidth ||
-        //                 // or use the size of the first item
-        //                 this.$filteredAtoms.outerWidth(true) ||
-        //                 // if there's no items, use size of container
-        //                 parentWidth;
-          
-        //   var cols = Math.floor( parentWidth / colW );
-        //   cols = Math.max( cols, 1 );
-
-        //   // i.e. this.masonry.cols = ....
-        //   this.masonry.cols = cols;
-        //   // i.e. this.masonry.columnWidth = ...
-        //   this.masonry.columnWidth = colW;
-        // };
-        
-        // $.Isotope.prototype._masonryReset = function() {
-        //   // layout-specific props
-        //   this.masonry = {};
-        //   // FIXME shouldn't have to call this again
-        //   this._getCenteredMasonryColumns();
-        //   var i = this.masonry.cols;
-        //   this.masonry.colYs = [];
-        //   while (i--) {
-        //     this.masonry.colYs.push( 0 );
-        //   }
-        // };
-
-        // $.Isotope.prototype._masonryResizeChanged = function() {
-        //   var prevColCount = this.masonry.cols;
-        //   // get updated colCount
-        //   this._getCenteredMasonryColumns();
-        //   return ( this.masonry.cols !== prevColCount );
-        // };
-        
-        // $.Isotope.prototype._masonryGetContainerSize = function() {
-        //   var unusedCols = 0,
-        //       i = this.masonry.cols;
-        //   // count unused columns
-        //   while ( --i ) {
-        //     if ( this.masonry.colYs[i] !== 0 ) {
-        //       break;
-        //     }
-        //     unusedCols++;
-        //   }
-        //   return {
-        //     height : Math.max.apply( Math, this.masonry.colYs ),
-        //     // fit container to columns that have been used;
-        //     width : (this.masonry.cols - unusedCols) * this.masonry.columnWidth
-        //   };
-        // };
 
         $(function(){
         
@@ -159,12 +100,10 @@
               $360mediabutton = $('.menu-item a[href^="<?php bloginfo('url') ?>/#360media"]'),
               $homebutton = $('a.logo-head');
 
-              // initialize isotope
-
             function forceReload( contentsReload ){
-              // jQuery('#isotopin').isotope({ filter: '' }).isotope( 'reLayout', function(){
+              jQuery('#isotopin').isotope({ filter: '' }).isotope( 'reLayout', function(){
                 contentsReload();
-              // });
+              });
             }
 
             function photographyLoad(){
@@ -229,6 +168,7 @@
               } else{
                 photographyLoad();
               }
+              return false;
               });
 
             $videobutton.click( function(){
@@ -238,6 +178,7 @@
               } else{
                 videoLoad();
               }
+              return false;
             });
 
             $shortfilmbutton.click( function(){
@@ -247,6 +188,7 @@
               } else{
                 shortfilmLoad();
               }
+              return false;
             });
 
             $commercialbutton.click( function(){ 
@@ -256,6 +198,7 @@
               }  else{
                 commercialLoad();
               }
+              return false;
             });
 
             $fashionbutton.click( function(){
@@ -265,6 +208,7 @@
               } else{
                 fashionLoad();
               }
+              return false;
             });
 
             $designbutton.click( function(){ 
@@ -274,6 +218,7 @@
               } else{
                 designLoad();
               }
+              return false;
             });
 
             $interactivebutton.click( function(){
@@ -283,6 +228,7 @@
               } else{
                 interactiveLoad();
               }
+              return false;
               });
 
             $360mediabutton.click( function(){ 
@@ -292,6 +238,7 @@
               } else{
                 package360Load();
               }
+              return false;
               });
 
             $homebutton.click( function(){

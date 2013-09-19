@@ -4,6 +4,8 @@
  */
 ?>
 
+<?php atc_precontent(); ?>
+
 <?php 
   $classes = array(
     'element'

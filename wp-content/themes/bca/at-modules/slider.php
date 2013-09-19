@@ -1,3 +1,6 @@
+<?php add_action('atc_precontent', 'atc_precontent_slider'); ?>
+
+<?php function atc_precontent_slider(){ ?>
 
 <?php if(get_field('home_page_slider', 'option')): ?>
   <div id="slide-case" class="slideshow-wrapper row slide-case">
@@ -13,3 +16,5 @@
     </ul>
   </div>
 <?php endif; ?>
+
+<?php } ?>
